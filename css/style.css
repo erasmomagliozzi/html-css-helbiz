@@ -106,7 +106,9 @@ header {
   .jumbo_text a img {
     width: 100%;
   }
-
+  .top_section {
+    background-position-x: -200px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -137,13 +139,26 @@ header {
   .jumbo_text a img {
     width: 100%;
   }
+  .md_display_none {
+    margin: 75px auto;
+  }
+  .top_section {
+   background-position-x: -200px;
+  }
+
 }
-section {
+[class*=section] {
   width: 100%;
 }
 .container_1250 {
   max-width: 1250px;
   margin: 0 auto;
+  min-height: 300px;
+}
+.container_1250:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .helbiz_go {
   background-color: #FAFAFA;
@@ -164,4 +179,37 @@ section {
   font-size: 20px;
   padding: 20px;
   display: block;
+}
+.section_phone {
+  height: 1000px;
+  position: relative;
+}
+.top_section {
+  height: 500px;
+  background-image: url(../img/HelbizBanner.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+/* .bottom_section {
+  background-color: red;
+} */
+.bottom_section h2 {
+  font-size: 3.5em;
+  margin-top: 60px;
+  margin-left: 50px;
+}
+.bottom_section h3 {
+  font-size: 2em;
+  margin: 60px 70px 30px 0;
+
+}
+.bottom_section p {
+  font-size: 2em;
+}
+.image_phone {
+  height: 750px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
